@@ -176,7 +176,7 @@
     if ((_sinceTouch > 0.5f)) {
         [character.physicsBody applyAngularImpulse:-40000.f*delta];
     }
-    /*
+    
     physicsNode.position = ccp(physicsNode.position.x - (character.physicsBody.velocity.x * delta), physicsNode.position.y);
     
     // loop the ground
@@ -219,7 +219,8 @@
                                  2 * cloud.contentSize.width, cloud.position.y);
         }
     }
-    */
+    
+    /*
     _parallaxBackground.position = ccp(_parallaxBackground.position.x - (character.physicsBody.velocity.x * delta), _parallaxBackground.position.y);
     
     // loop the bushes
@@ -257,7 +258,9 @@
             }
         }
     }
-    
+
+     */
+     
     NSMutableArray *offScreenObstacles = nil;
     
     for (CCNode *obstacle in _obstacles) {
@@ -270,6 +273,7 @@
             [offScreenObstacles addObject:obstacle];
         }
     }
+     
     
     for (CCNode *obstacleToRemove in offScreenObstacles) {
         [obstacleToRemove removeFromParent];
