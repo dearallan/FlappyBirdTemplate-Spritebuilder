@@ -177,7 +177,7 @@
         [character.physicsBody applyAngularImpulse:-40000.f*delta];
     }
     
-    physicsNode.position = ccp(physicsNode.position.x - (character.physicsBody.velocity.x * delta), physicsNode.position.y);
+    //physicsNode.position = ccp(physicsNode.position.x - (character.physicsBody.velocity.x * delta), physicsNode.position.y);
     
     // loop the ground
     for (CCNode *ground in _grounds) {
@@ -192,6 +192,7 @@
         }
     }
     
+    /*
     // move and loop the bushes
     for (CCNode *bush in _bushes) {
         // move the bush
@@ -219,8 +220,9 @@
                                  2 * cloud.contentSize.width, cloud.position.y);
         }
     }
+     */
     
-    /*
+    
     _parallaxBackground.position = ccp(_parallaxBackground.position.x - (character.physicsBody.velocity.x * delta), _parallaxBackground.position.y);
     
     // loop the bushes
@@ -259,7 +261,6 @@
         }
     }
 
-     */
      
     NSMutableArray *offScreenObstacles = nil;
     
